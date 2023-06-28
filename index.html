@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trading Profitability Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <img src="images/6.png" alt="Image" id="topImage">
+  <h1>Trading Profitability Calculator</h1>
+  <form id="calculatorForm">
+    <label for="accountBalance">Starting Account Balance:</label>
+    <input type="number" id="accountBalance" required><br>
+    <label for="percentageUsedPerTrade">% of Account Used Per Trade:</label>
+    <input type="number" id="percentageUsedPerTrade" required><br>
+    <label for="takeProfitPercentage">Take Profit (as % of position):</label>
+    <input type="number" id="takeProfitPercentage" required><br>
+    <label for="stopLossPercentage">Stop Loss (as % of position):</label>
+    <input type="number" id="stopLossPercentage" required><br>
+    <label for="leverage">Leverage Used (e.g 10x, if no leverage enter 1):</label>
+    <input type="number" id="leverage" required><br>
+    <label for="winningTradePercentage">Winning Trade %:</label>
+    <input type="number" id="winningTradePercentage" required><br>
+    <label for="numberOfTrades">Number of Trades:</label>
+    <input type="number" id="numberOfTrades" required><br>
+    <button type="submit" id="calculateButton">Calculate</button>
+  </form>
+
+  <div id="results" class="hidden">
+    <h2>Results:</h2>
+    <p>Risk per Trade: $<span id="riskPerTrade"></span></p>
+    <p>Take Profit Amount: $<span id="takeProfitAmount"></span></p>
+    <p>Stop Loss Amount: $<span id="stopLossAmount"></span></p>
+    <p>Position Size: $<span id="positionSize"></span></p>
+    <p>Expected Profitability: $<span id="expectedProfitability"></span></p>
+  </div>
+  <br />
+
+  <div id="finalBalance" class="hidden">
+    <h2>Estimated Future Account Balance:</h2>
+    <p>$<span id="estimatedAccountBalance"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
